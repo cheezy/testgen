@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'thor'
+
+class TestGenCommand < Thor
+  def app
+  end
+end
+
+TestGenCommand.start
