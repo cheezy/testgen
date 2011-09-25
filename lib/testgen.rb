@@ -1,5 +1,5 @@
 require "testgen/version"
 
-module Testgen
+module TestGen
   # Your code goes here...
 end
