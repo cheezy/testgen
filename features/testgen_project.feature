@@ -15,3 +15,19 @@ Feature: Generating a project with TestGen
     And the file "sample/Gemfile" should contain "gem 'cucumber'"
     And the file "sample/Gemfile" should contain "gem 'rspec'"
     
+  Scenario: Generating the Rakefile file
+    Then a file named "sample/Rakefile" should exist
+    And the file "sample/Rakefile" should contain "Cucumber::Rake::Task.new(:features)"
+    And the file "sample/Rakefile" should contain exactly:
+    """
+    require 'rubygems'
+    require 'cucumber'
+    require 'cucumber/rake/task'
+
+    Cucumber::Rake::Task.new(:features) do |t|
+      t.profile 'default'
+    end
+
+    task :default => :features
+    """
+    

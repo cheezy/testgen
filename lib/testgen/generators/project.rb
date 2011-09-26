@@ -24,6 +24,10 @@ module TestGen
       def copy_gemfile
         copy_file "Gemfile", "#{name}/Gemfile"
       end
+      
+      def copy_rakefile
+        copy_file "Rakefile", "#{name}/Rakefile"
+      end
     end
   end
 end
