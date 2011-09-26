@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
-print "nothing"
+require 'testgen/cli'
+TestGen::CLI.start

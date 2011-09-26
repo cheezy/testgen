@@ -1,1 +1,2 @@
-default: --no-source
+default: --no-source --color --format pretty
+autotest: --no-source --color --format pretty
