@@ -1,4 +1,5 @@
 require 'thor/group'
+require 'sys/uname'
 
 module TestGen
   module Generators
@@ -9,13 +10,20 @@ module TestGen
       desc "Generates a project structure for testing with Cucumber"
       
       def self.source_root
-        File.dirname(__FILE__)
+        File.dirname(__FILE__) + "/project"
       end
     
       def create_top_directory
         empty_directory(name)
       end
+      
+      def copy_cucumber_yml
+        template("cucumber.yml", "#{name}/cucumber.yml")
+      end
     
+      def copy_gemfile
+        copy_file "Gemfile", "#{name}/Gemfile"
+      end
     end
   end
 end
