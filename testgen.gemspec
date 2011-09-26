@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["jeff.morgan@leandog.com"]
   s.homepage    = "http://github.com/cheezy/testgen"
   s.summary     = %q{Generators for testers using Cucumber}
-  s.description = %q{A collection of generators testers can use to create test projects and various test itens for use with Cucumber}
+  s.description = %q{A collection of generators build things for testers using Cucumber}
 
   s.rubyforge_project = "testgen"
 
@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'thor', '>=0.14.6'
+  s.add_dependency 'cucumber', '>=1.0.0'
+  s.add_dependency 'rspec', '>=2.6.0'
 
-  s.add_development_dependency 'rspec', '>=2.6.0'
-  s.add_development_dependency 'cucumber', '>=1.0.0'
   s.add_development_dependency 'aruba'
 end
