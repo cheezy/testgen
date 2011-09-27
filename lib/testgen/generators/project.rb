@@ -28,6 +28,16 @@ module TestGen
       def copy_rakefile
         copy_file "Rakefile", "#{name}/Rakefile"
       end
+      
+      def create_cucumber_directories
+        empty_directory("#{name}/features")
+        empty_directory("#{name}/features/support")
+        empty_directory("#{name}/features/step_definitions")
+      end
+      
+      def copy_env
+        copy_file "env.rb", "#{name}/features/support/env.rb"
+      end
     end
   end
 end

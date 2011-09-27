@@ -3,7 +3,7 @@ Feature: Generating a project with TestGen
   Background:
     When I run `testgen project sample`
 
-  Scenario: Generating the top level project directory
+  Scenario: Creating the top level project directory
     Then a directory named "sample" should exist
     
   Scenario: Generating the cucumber.yml file
@@ -30,4 +30,12 @@ Feature: Generating a project with TestGen
 
     task :default => :features
     """
-    
+  Scenario: Creating the features set of directories
+    Then the following directories should exist:
+      | sample/features                   |
+      | sample/features/support           |
+      | sample/features/step_definitions  |
+
+  Scenario: Generating the env.rb file
+    Then a file named "sample/features/support/env.rb" should exist
+    And the file "sample/features/support/env.rb" should contain "require 'rspec-expectations'"
