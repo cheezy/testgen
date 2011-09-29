@@ -1,0 +1,5 @@
+gem 'cucumber'
+gem 'rspec'
+<% unless pageobject_driver.downcase == 'none' -%>
+gem 'page-object'
+<% end -%>

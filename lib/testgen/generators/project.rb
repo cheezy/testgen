@@ -7,6 +7,7 @@ module TestGen
       include Thor::Actions
     
       argument :name, :type => :string, :desc => 'The name of the project'
+      argument :pageobject_driver, :type => :string, :desc => 'Driver to use with PageObject'
       desc "Generates a project structure for testing with Cucumber"
       
       def self.source_root
@@ -18,11 +19,11 @@ module TestGen
       end
       
       def copy_cucumber_yml
-        template("cucumber.yml", "#{name}/cucumber.yml")
+        template "cucumber.yml.tt", "#{name}/cucumber.yml"
       end
     
       def copy_gemfile
-        copy_file "Gemfile", "#{name}/Gemfile"
+        template "Gemfile.tt", "#{name}/Gemfile"
       end
       
       def copy_rakefile
@@ -36,7 +37,11 @@ module TestGen
       end
       
       def copy_env
-        copy_file "env.rb", "#{name}/features/support/env.rb"
+        template "env.rb.tt", "#{name}/features/support/env.rb"
+      end
+      
+      def copy_hooks
+        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless pageobject_driver.downcase == 'none'
       end
     end
   end

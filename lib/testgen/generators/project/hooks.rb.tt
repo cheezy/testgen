@@ -1,0 +1,20 @@
+<% if pageobject_driver.downcase == 'watir' -%>
+require 'watir-webdriver'
+<% end %>
+<% if pageobject_driver.downcase == 'selenium' -%>
+require 'selenium-webdriver'
+<% end %>
+
+Before do
+<% if pageobject_driver.downcase == 'watir' -%>
+  @browser = Watir::Browser.new :firefox
+<% end %>
+<% if pageobject_driver.downcase == 'selenium' -%>
+  @browser = Selenium::Webdriver.for :firefox
+<% end %>
+end
+
+
+After do
+  @browser.close
+end
