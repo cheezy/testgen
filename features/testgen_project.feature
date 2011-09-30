@@ -25,7 +25,7 @@ Feature: Generating a project with TestGen
     require 'cucumber/rake/task'
 
     Cucumber::Rake::Task.new(:features) do |t|
-      t.profile 'default'
+      t.profile = 'default'
     end
 
     task :default => :features
