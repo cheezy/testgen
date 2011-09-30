@@ -41,7 +41,17 @@ module TestGen
       end
       
       def copy_hooks
-        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless pageobject_driver.downcase == 'none'
+        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless no_driver_selected
+      end
+      
+      def create_pages_directory
+        empty_directory("#{name}/features/support/pages") unless no_driver_selected
+      end
+      
+      private
+      
+      def no_driver_selected
+        pageobject_driver.downcase == 'none'
       end
     end
   end
