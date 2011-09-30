@@ -23,7 +23,7 @@ Feature: Adding support for the --pageobject-driver option
     When I run `testgen project sample --pageobject-driver=selenium`
     Then a file named "sample/features/support/hooks.rb" should exist
     And the file "sample/features/support/hooks.rb" should contain "require 'selenium-webdriver'"
-    And the file "sample/features/support/hooks.rb" should contain "@browser = Selenium::Webdriver.for :firefox"
+    And the file "sample/features/support/hooks.rb" should contain "@browser = Selenium::WebDriver.for :firefox"
   
   Scenario: Creating the pages directory
     When I run `testgen project sample --pageobject-driver=selenium`
