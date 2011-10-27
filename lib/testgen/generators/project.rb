@@ -8,6 +8,7 @@ module TestGen
     
       argument :name, :type => :string, :desc => 'The name of the project'
       argument :pageobject_driver, :type => :string, :desc => 'Driver to use with PageObject'
+      argument :with_lib, :type => :string, :desc => 'Place all shared objects in the lib directory'
       desc "Generates a project structure for testing with Cucumber"
       
       def self.source_root
@@ -44,14 +45,26 @@ module TestGen
         template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless no_driver_selected
       end
       
+      def create_lib_directory
+        empty_directory("#{name}/lib") if gen_lib
+      end
+      
       def create_pages_directory
-        empty_directory("#{name}/features/support/pages") unless no_driver_selected
+        if gen_lib
+          empty_directory("#{name}/lib/pages") unless no_driver_selected
+        else
+          empty_directory("#{name}/features/support/pages") unless no_driver_selected
+        end
       end
       
       private
       
       def no_driver_selected
         pageobject_driver.downcase == 'none'
+      end
+      
+      def gen_lib
+        with_lib == 'true'
       end
     end
   end

@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'cucumber', '>=1.0.0'
   s.add_dependency 'rspec', '>=2.6.0'
   s.add_dependency 'sys-uname'
+  s.add_dependency 'require_all'
 
   s.add_development_dependency 'aruba'
 end

@@ -3,3 +3,9 @@ gem 'rspec'
 <% unless pageobject_driver.downcase == 'none' -%>
 gem 'page-object'
 <% end -%>
+<% if with_lib == 'true' -%>
+gem 'require_all'
+
+require_all 'lib'
+<% end -%>
+
