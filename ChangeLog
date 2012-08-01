@@ -1,3 +1,6 @@
+===  Version 0.3
+* Fixed problem with not including source in generated Gemfile
+
 === Version 0.2.4
 * Enhancements
   * added --with-lib option to store pages in a lib directory off the project root
