@@ -1,3 +1,5 @@
+source 'http://rubygems.org'
+
 gem 'cucumber'
 gem 'rspec'
 <% unless pageobject_driver.downcase == 'none' -%>
