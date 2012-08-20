@@ -5,7 +5,10 @@ gem 'rspec'
 <% unless pageobject_driver.downcase == 'none' -%>
 gem 'page-object'
 <% end -%>
-<% if with_lib == 'true' -%>
+<% if with_lib == 'true' or with_gametel == 'true' -%>
 gem 'require_all'
+<% end -%>
+<% if with_gametel == 'true' -%>
+gem 'gametel'
 <% end -%>
 
