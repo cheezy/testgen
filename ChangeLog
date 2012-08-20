@@ -1,7 +1,10 @@
-===  Version 0.3
+=== Version 0.4 / 2012-08-20
+* Added support for gametel by using the --with-gametel option
+
+===  Version 0.3 / 2012-08-01
 * Fixed problem with not including source in generated Gemfile
 
-=== Version 0.2.4
+=== Version 0.2.4 / 2011-10-28
 * Enhancements
   * added --with-lib option to store pages in a lib directory off the project root
 
