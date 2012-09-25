@@ -1,3 +1,6 @@
+=== Version 0.5 / 2012-09-24
+* Added support for the latest features of gametel
+
 === Version 0.4 / 2012-08-20
 * Added support for gametel by using the --with-gametel option
 
