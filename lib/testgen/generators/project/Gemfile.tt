@@ -10,5 +10,6 @@ gem 'require_all'
 <% end -%>
 <% if with_gametel == 'true' -%>
 gem 'gametel'
+gem 'rake'
 <% end -%>
 

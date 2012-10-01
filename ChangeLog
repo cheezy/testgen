@@ -1,3 +1,8 @@
+=== Version 0.5.1 / 2012-10-1
+* Added rake to the gemfile when using gametel
+* Added required usage of require_all in env.rb when using gametel
+* Changed placeholder for call to start
+
 === Version 0.5 / 2012-09-24
 * Added support for the latest features of gametel
 
