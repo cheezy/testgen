@@ -21,7 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'thor', '>=0.16.0'
   s.add_dependency 'cucumber', '>=1.2.0'
   s.add_dependency 'rspec', '>=2.11.0'
-  s.add_dependency 'sys-uname'
   s.add_dependency 'require_all'
 
   s.add_development_dependency 'aruba'

@@ -1,3 +1,6 @@
+=== Version 0.5.2 / 2012-11-5
+* Removed unused reference to uname gem
+
 === Version 0.5.1 / 2012-10-1
 * Added rake to the gemfile when using gametel
 * Added required usage of require_all in env.rb when using gametel
