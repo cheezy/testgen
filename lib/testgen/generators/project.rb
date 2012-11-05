@@ -1,5 +1,4 @@
 require 'thor/group'
-require 'sys/uname'
 
 module TestGen
   module Generators
