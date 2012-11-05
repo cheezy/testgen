@@ -1,4 +1,3 @@
-@focus
 Feature: Adding the --with-gametel flag
 
   Scenario: Adding the require_all and gametel gems to Gemfile
