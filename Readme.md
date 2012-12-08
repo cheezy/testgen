@@ -25,7 +25,10 @@ If you are testing an android application in the emulator or on a device, <em>te
 
 ## Moving page-objects or screen-objects to the lib directory
 
-There is another option available with will create the page or screen directory in a base directoy named lib.  It will also setup the project so these files get loaded the same way they would if the directory was in the support directory.
+There is another option available with will create the page or screen directory in a base directoy named lib.  It will also setup the project so these files get loaded the same way they would if the directory was in the support directory.  Here's an example of creating a project for web testing using the lib option:
+
+    testgen project <project_name> --pageobject-driver=watir --with-lib
+
 
 
 
