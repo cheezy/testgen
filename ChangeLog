@@ -1,3 +1,6 @@
+=== Version 0.6
+* Removed the require of page-object/page_factory since it is no longer needed
+
 === Version 0.5.2 / 2012-11-5
 * Removed unused reference to uname gem
 

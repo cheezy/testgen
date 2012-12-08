@@ -10,7 +10,6 @@ Feature: Adding support for the --pageobject-driver option
     When I run `testgen project sample --pageobject-driver=watir`
     Then a file named "sample/features/support/env.rb" should exist
     And the file "sample/features/support/env.rb" should contain "require 'page-object'"
-    And the file "sample/features/support/env.rb" should contain "require 'page-object/page_factory'"
     And the file "sample/features/support/env.rb" should contain "World(PageObject::PageFactory)"    
     
   Scenario: Adding the hook file for Watir  
