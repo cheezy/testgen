@@ -12,4 +12,8 @@ gem 'require_all'
 gem 'gametel'
 gem 'rake'
 <% end -%>
-
+<% if with_mohawk == 'true' -%>
+gem 'childprocess'
+gem 'mohawk'
+gem 'rake'
+<% end -%>
