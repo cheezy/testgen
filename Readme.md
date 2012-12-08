@@ -7,8 +7,25 @@ Currently it only generates a cucumber project.  You can do this by executing:
     testgen project <project_name>
     
 This command will create a project in the <em>project_name</em> directory with the files needed to begin
-developing cucumber features.  If you are using the PageObject gem you can also provide an option to setup your project accordingly.
+developing cucumber features.  There are options that can be provided to have the project configure to use different gems.  Here are a few:
+
+## Web testing
+
+If you are testing a web application, <em>testgen</em> can setup the project to use the PageObject gem.
 
     testgen project <project_name> --pageobject-driver=watir
     
 Valid options for the <em>--pageobject-driver</em> option are 'watir' or 'selenium'
+
+## Android testing
+
+If you are testing an android application in the emulator or on a device, <em>testgen</em> can setup the project to use the Gametel gem.
+
+    testgen project <project_name> --with-gametel
+
+## Moving page-objects or screen-objects to the lib directory
+
+There is another option available with will create the page or screen directory in a base directoy named lib.  It will also setup the project so these files get loaded the same way they would if the directory was in the support directory.
+
+
+
