@@ -1,4 +1,3 @@
-@focus
 Feature: Adding the --with-mohawk flag
 
   Scenario: Adding the childprocess and mohawk gems to Gemfile
