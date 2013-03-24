@@ -15,12 +15,6 @@ Feature: Adding the --with-gametel flag
     And the file "sample/features/support/env.rb" should contain "require 'gametel'"
     And the file "sample/features/support/env.rb" should contain "World(Gametel::Navigation)"
     
-  Scenario: Adding require all to the env.rb
-    When I run `testgen project sample --with-gametel`
-    Then a file named "sample/features/support/env.rb" should exist
-    And the file "sample/features/support/env.rb" should contain "require 'require_all'"
-    And the file "sample/features/support/env.rb" should contain "require_rel 'screens'"
-    
   Scenario: Creating the keystore
     When I run `testgen project sample --with-gametel`
     Then a file named "sample/features/support/env.rb" should exist
