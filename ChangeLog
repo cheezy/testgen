@@ -1,3 +1,6 @@
+=== Verstion 0.8 / 2013-4-8
+* Simplified Gametel generated files to utilize Gametel updates
+
 === Version 0.7 / 2013-3-24
 * Fixed order of requires when using the --with-lib option
 
