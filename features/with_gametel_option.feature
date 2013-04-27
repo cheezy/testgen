@@ -25,9 +25,10 @@ Feature: Adding the --with-gametel flag
   Scenario: Creating the Driver and hooks
     When I run `testgen project sample --with-gametel`
     Then a file named "sample/features/support/env.rb" should exist
-    And the file "sample/features/support/env.rb" should contain "@driver = Gametel.start(ACTIVITY_NAME_GOES_HERE, keystore)"
+    And the file "sample/features/support/env.rb" should contain "@driver = Gametel.start(ACTIVITY_NAME_GOES_HERE)"
     And the file "sample/features/support/env.rb" should contain "Gametel.stop"
     And the file "sample/features/support/env.rb" should contain "Gametel.apk_path = PATH_TO_APK"
+    And the file "sample/features/support/env.rb" should contain "Gametel.keystore = keystore"
     
 
   Scenario: Should not create the hooks file
