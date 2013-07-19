@@ -5,6 +5,7 @@ require "testgen/version"
 Gem::Specification.new do |s|
   s.name        = "testgen"
   s.version     = TestGen::VERSION
+  s.license     = 'MIT'
   s.authors     = ["Jeffrey S. Morgan"]
   s.email       = ["jeff.morgan@leandog.com"]
   s.homepage    = "http://github.com/cheezy/testgen"
