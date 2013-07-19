@@ -1,3 +1,6 @@
+=== Version 0.8.2 / 2013-7-19
+* Changed gemfile to use https for rubygems.org
+
 === Version 0.8.1 / 2013-4-26
 * Updated --with-gametel option to match updated gametel gem release
 
