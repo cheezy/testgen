@@ -14,7 +14,7 @@ Feature: Generating a project with TestGen
     Then a file named "sample/Gemfile" should exist
     And the file "sample/Gemfile" should contain "gem 'cucumber'"
     And the file "sample/Gemfile" should contain "gem 'rspec'"
-    And the file "sample/Gemfile" should contain "source 'http://rubygems.org'"
+    And the file "sample/Gemfile" should contain "source 'https://rubygems.org'"
 
     
   Scenario: Generating the Rakefile file
