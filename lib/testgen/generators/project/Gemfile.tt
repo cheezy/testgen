@@ -13,7 +13,6 @@ gem 'gametel'
 gem 'rake'
 <% end -%>
 <% if with_mohawk == 'true' -%>
-gem 'childprocess'
-gem 'mohawk'
+gem 'mohawk', '~> 0.0.5'
 gem 'rake'
 <% end -%>
