@@ -1,3 +1,7 @@
+=== Version 0.8.3
+* Updated Mohawk's startup to match updates to gem
+* Mohawk now takes screenshot when test fails
+
 === Version 0.8.2 / 2013-7-19
 * Changed gemfile to use https for rubygems.org
 
