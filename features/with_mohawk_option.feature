@@ -11,7 +11,7 @@ Feature: Adding the --with-mohawk flag
     When I run `testgen project sample --with-mohawk`
     Then a file named "sample/features/support/env.rb" should exist
     And the file "sample/features/support/env.rb" should contain "require 'mohawk'"
-    And the file "sample/features/support/env.rb" should contain "require 'win32screenshot'"
+    And the file "sample/features/support/env.rb" should contain "require 'win32/screenshot'"
     And the file "sample/features/support/env.rb" should contain "World(Mohawk::Navigation)"
 
   Scenario: Creating the Driver and hooks
