@@ -4,6 +4,7 @@ Feature: Adding the --with-mohawk flag
     When I run `testgen project sample --with-mohawk`
     Then a file named "sample/Gemfile" should exist
     And the file "sample/Gemfile" should contain "gem 'mohawk', '~> 0.1'"
+    And the file "sample/Gemfile" should contain "gem 'ffi', '1.9.0'"
     And the file "sample/Gemfile" should contain "gem 'win32screenshot'"
     And the file "sample/Gemfile" should contain "gem 'rake'"
 
