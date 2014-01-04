@@ -13,7 +13,8 @@ gem 'gametel'
 gem 'rake'
 <% end -%>
 <% if with_mohawk == 'true' -%>
-gem 'mohawk', '~> 0.0.8'
+gem 'mohawk', '~> 0.1'
+gem 'ffi', '1.9.0'
 gem 'win32screenshot'
 gem 'rake'
 <% end -%>
