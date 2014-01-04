@@ -1,3 +1,7 @@
+=== Version 0.8.5 / 2014-1-4
+* When using Mohawk it forces specific version of ffi
+* Updated Mohawk dependency
+
 === Version 0.8.4 / 2013-9-6
 * Fix for Mohwak win32/screenshot require
 * Updated Mohawk dependency to version 0.0.8
