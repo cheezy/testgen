@@ -40,4 +40,4 @@ Feature: Generating a project with TestGen
 
   Scenario: Generating the env.rb file
     Then a file named "sample/features/support/env.rb" should exist
-    And the file "sample/features/support/env.rb" should contain "require 'rspec-expectations'"
+    And the file "sample/features/support/env.rb" should contain "require 'rspec'"
