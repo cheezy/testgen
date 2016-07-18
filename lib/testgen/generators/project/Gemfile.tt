@@ -6,16 +6,18 @@ gem 'rake'
 <% unless pageobject_driver.downcase == 'none' -%>
 gem 'page-object'
 <% end -%>
-<% if with_lib == 'true' or with_gametel == 'true' -%>
+<% if with_lib == 'true' or with_gametel == 'true' or with_appium == 'true' -%>
 gem 'require_all'
 <% end -%>
 <% if with_gametel == 'true' -%>
 gem 'gametel'
-gem 'rake'
 <% end -%>
 <% if with_mohawk == 'true' -%>
 gem 'mohawk', '~> 0.1'
 gem 'ffi', '1.9.0'
 gem 'win32screenshot'
-gem 'rake'
+<% end -%>
+<% if with_appium =='true' -%>
+gem 'appium_lib'
+gem 'selenium-cucumber'
 <% end -%>

@@ -23,6 +23,10 @@ If you are testing an android application in the emulator or on a device, <em>te
 
     testgen project <project_name> --with-gametel
 
+If you want to setup project to use the Appium library
+
+    testgen project <project_name> --with-appium
+
 ## Native Windows testing
 
 If you are testing a native windows application, <em>testgen</em> can setup the project to use the Mohawk gem.

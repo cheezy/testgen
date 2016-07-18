@@ -10,6 +10,8 @@ module TestGen
       argument :with_lib, :type => :string, :desc => 'Place all shared objects in the lib directory'
       argument :with_gametel, :type => :string, :desc => 'Add support for the gametel gem'
       argument :with_mohawk, :type => :string, :desc => 'Add support for the mohawk gem'
+      argument :with_appium, :type => :string, :desc => 'Add support for appium gem'
+
       desc "Generates a project structure for testing with Cucumber"
       
       def self.source_root
@@ -53,10 +55,10 @@ module TestGen
       def create_pages_directory
         if gen_lib
           empty_directory("#{name}/lib/pages") unless no_driver_selected
-          empty_directory("#{name}/lib/screens") if with_gametel == 'true' or with_mohawk == 'true'
+          empty_directory("#{name}/lib/screens") if with_gametel == 'true'|| with_mohawk == 'true' || with_appium == 'true'
         else
           empty_directory("#{name}/features/support/pages") unless no_driver_selected
-          empty_directory("#{name}/features/support/screens") if with_gametel == 'true' or with_mohawk == 'true'
+          empty_directory("#{name}/features/support/screens") if with_gametel == 'true' || with_mohawk == 'true' || with_appium == 'true'
         end
       end
       
