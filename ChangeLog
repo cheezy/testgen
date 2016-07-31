@@ -1,6 +1,6 @@
-=== Version 0.8.8 / 2016-07-18
+=== Version 0.8.8 / 2016-07-31
 * Removed redundant line with rake gem from Gemfile
-* Added support of appium lib
+* Added support of appium lib (Thanks Kirikami)
 
 === Version 0.8.7 / 2014-12-12
 * Updated to remove Rake warning (Thanks Paul Clewell)
