@@ -1,3 +1,3 @@
 module TestGen
-  VERSION = "0.8.8"
+  VERSION = "0.9"
 end
