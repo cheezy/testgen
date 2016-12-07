@@ -1,5 +1,7 @@
-=== Version 0.9
-
+=== Version 0.9 / 2016-12-7
+* Updated Gemfile generation to use PageObject 2.0
+* Updated hooks generation to use Watir instead of WatirWebdriver
+* Updated hooks generation to default to chrome browser
 
 === Version 0.8.8 / 2016-07-31
 * Removed redundant line with rake gem from Gemfile

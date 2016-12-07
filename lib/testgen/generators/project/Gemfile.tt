@@ -4,7 +4,7 @@ gem 'cucumber'
 gem 'rspec'
 gem 'rake'
 <% unless pageobject_driver.downcase == 'none' -%>
-gem 'page-object'
+gem 'page-object', '~> 2.0'
 <% end -%>
 <% if with_lib == 'true' or with_gametel == 'true' or with_appium == 'true' -%>
 gem 'require_all'
