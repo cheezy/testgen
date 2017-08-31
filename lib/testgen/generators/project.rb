@@ -6,7 +6,6 @@ module TestGen
       include Thor::Actions
     
       argument :name, :type => :string, :desc => 'The name of the project'
-      argument :pageobject_driver, :type => :string, :desc => 'Driver to use with PageObject'
       argument :with_lib, :type => :string, :desc => 'Place all shared objects in the lib directory'
       argument :with_mohawk, :type => :string, :desc => 'Add support for the mohawk gem'
       argument :with_appium, :type => :string, :desc => 'Add support for appium gem'
@@ -44,7 +43,7 @@ module TestGen
       end
       
       def copy_hooks
-        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless no_driver_selected
+        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" if with_mohawk == 'false' && with_appium == 'false'
       end
       
       def create_lib_directory
@@ -53,19 +52,15 @@ module TestGen
       
       def create_pages_directory
         if gen_lib
-          empty_directory("#{name}/lib/pages") unless no_driver_selected
+          empty_directory("#{name}/lib/pages") if with_mohawk == 'false' && with_appium == 'false'
           empty_directory("#{name}/lib/screens") if with_mohawk == 'true' || with_appium == 'true'
         else
-          empty_directory("#{name}/features/support/pages") unless no_driver_selected
+          empty_directory("#{name}/features/support/pages") if with_mohawk == 'false' && with_appium == 'false'
           empty_directory("#{name}/features/support/screens") if with_mohawk == 'true' || with_appium == 'true'
         end
       end
       
       private
-      
-      def no_driver_selected
-        pageobject_driver.downcase == 'none'
-      end
       
       def gen_lib
         with_lib == 'true'

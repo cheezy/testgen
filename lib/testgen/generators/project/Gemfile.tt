@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'cucumber'
 gem 'rspec'
 gem 'rake'
-<% unless pageobject_driver.downcase == 'none' -%>
+<% if with_appium == 'false' and with_mohawk == 'false' -%>
 gem 'page-object', '~> 2.0'
 <% end -%>
 <% if with_lib == 'true' or with_appium == 'true' -%>

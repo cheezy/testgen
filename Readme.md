@@ -11,12 +11,11 @@ developing cucumber features.  There are options that can be provided to have th
 
 ## Web testing
 
-If you are testing a web application, <em>testgen</em> can setup the project to use the PageObject gem.
+If you are testing a web application, <em>testgen</em> will by default setup the project to use the PageObject gem
+with Watir.
 
-    testgen project <project_name> --pageobject-driver=watir
+    testgen project <project_name>
     
-Valid options for the <em>--pageobject-driver</em> option are 'watir' or 'selenium'
-
 ## Android testing
 
 If you want to setup project to use the Appium library
