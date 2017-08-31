@@ -1,5 +1,6 @@
 === Version 1.0
-* Remvoed support for Gametel
+* Removed support for Gametel
+* Made web and PageObject the default generation
 
 === Version 0.9 / 2016-12-7
 * Updated Gemfile generation to use PageObject 2.0
