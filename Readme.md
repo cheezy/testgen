@@ -19,10 +19,6 @@ Valid options for the <em>--pageobject-driver</em> option are 'watir' or 'seleni
 
 ## Android testing
 
-If you are testing an android application in the emulator or on a device, <em>testgen</em> can setup the project to use the Gametel gem.
-
-    testgen project <project_name> --with-gametel
-
 If you want to setup project to use the Appium library
 
     testgen project <project_name> --with-appium

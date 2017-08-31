@@ -6,11 +6,8 @@ gem 'rake'
 <% unless pageobject_driver.downcase == 'none' -%>
 gem 'page-object', '~> 2.0'
 <% end -%>
-<% if with_lib == 'true' or with_gametel == 'true' or with_appium == 'true' -%>
+<% if with_lib == 'true' or with_appium == 'true' -%>
 gem 'require_all'
-<% end -%>
-<% if with_gametel == 'true' -%>
-gem 'gametel'
 <% end -%>
 <% if with_mohawk == 'true' -%>
 gem 'mohawk', '~> 0.1'

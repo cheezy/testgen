@@ -1,3 +1,6 @@
+=== Version 1.0
+* Remvoed support for Gametel
+
 === Version 0.9 / 2016-12-7
 * Updated Gemfile generation to use PageObject 2.0
 * Updated hooks generation to use Watir instead of WatirWebdriver
