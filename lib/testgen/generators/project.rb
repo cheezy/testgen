@@ -43,7 +43,7 @@ module TestGen
       end
       
       def copy_hooks
-        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" if with_mohawk == 'false' && with_appium == 'false'
+        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" if gen_pageobject
       end
       
       def create_lib_directory
@@ -52,15 +52,19 @@ module TestGen
       
       def create_pages_directory
         if gen_lib
-          empty_directory("#{name}/lib/pages") if with_mohawk == 'false' && with_appium == 'false'
-          empty_directory("#{name}/lib/screens") if with_mohawk == 'true' || with_appium == 'true'
+          empty_directory("#{name}/lib/pages") if gen_pageobject
+          empty_directory("#{name}/lib/screens") unless gen_pageobject
         else
-          empty_directory("#{name}/features/support/pages") if with_mohawk == 'false' && with_appium == 'false'
-          empty_directory("#{name}/features/support/screens") if with_mohawk == 'true' || with_appium == 'true'
+          empty_directory("#{name}/features/support/pages") if gen_pageobject
+          empty_directory("#{name}/features/support/screens") unless gen_pageobject
         end
       end
       
       private
+
+      def gen_pageobject
+        with_mohawk == 'false' && with_appium == 'false'
+      end
       
       def gen_lib
         with_lib == 'true'
