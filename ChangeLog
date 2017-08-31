@@ -1,6 +1,7 @@
-=== Version 1.0
+=== Version 1.0 / 2017-08-31
 * Removed support for Gametel
 * Made web and PageObject the default generation
+* Added support for DataMagic in the web generator
 
 === Version 0.9 / 2016-12-7
 * Updated Gemfile generation to use PageObject 2.0
