@@ -5,6 +5,7 @@ gem 'rspec'
 gem 'rake'
 <% if with_appium == 'false' and with_mohawk == 'false' -%>
 gem 'page-object', '~> 2.0'
+gem 'data_magic'
 <% end -%>
 <% if with_lib == 'true' or with_appium == 'true' -%>
 gem 'require_all'
