@@ -7,6 +7,9 @@ gem 'rake'
 gem 'page-object', '~> 2.0'
 gem 'data_magic'
 <% end -%>
+<% if with_config =='true' -%>
+gem 'fig_newton'
+<% end -%>
 <% if with_lib == 'true' or with_appium == 'true' -%>
 gem 'require_all'
 <% end -%>
