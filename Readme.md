@@ -2,7 +2,7 @@
 
 A gem that contains generators that create things testers need.
 
-Firstly install the gem by running the following in the terminal:
+First install the gem by running the following in the terminal:
 
     gem install testgen
 
@@ -26,7 +26,7 @@ my_project_name
         └── pages
 ```
 
-There are options that can be provided to have the project configure to use different gems. Here are a few:
+There are options that can be provided to configure the project to use different gems. Below are the options available:
 
 ## Web testing
 
