@@ -1,7 +1,7 @@
 Feature: Adding the --with-lib flag
 
   Background:
-    When I run `testgen project sample --with-lib --pageobject-driver=watir`
+    When I run `testgen project sample --with-lib`
 
   Scenario: Adding the require_all gem to Gemfile
     Then a file named "sample/Gemfile" should exist

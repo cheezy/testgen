@@ -3,14 +3,12 @@ source 'https://rubygems.org'
 gem 'cucumber'
 gem 'rspec'
 gem 'rake'
-<% unless pageobject_driver.downcase == 'none' -%>
+<% if with_appium == 'false' and with_mohawk == 'false' -%>
 gem 'page-object', '~> 2.0'
+gem 'data_magic'
 <% end -%>
-<% if with_lib == 'true' or with_gametel == 'true' or with_appium == 'true' -%>
+<% if with_lib == 'true' or with_appium == 'true' -%>
 gem 'require_all'
-<% end -%>
-<% if with_gametel == 'true' -%>
-gem 'gametel'
 <% end -%>
 <% if with_mohawk == 'true' -%>
 gem 'mohawk', '~> 0.1'

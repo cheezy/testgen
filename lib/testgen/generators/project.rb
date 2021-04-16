@@ -6,9 +6,7 @@ module TestGen
       include Thor::Actions
     
       argument :name, :type => :string, :desc => 'The name of the project'
-      argument :pageobject_driver, :type => :string, :desc => 'Driver to use with PageObject'
       argument :with_lib, :type => :string, :desc => 'Place all shared objects in the lib directory'
-      argument :with_gametel, :type => :string, :desc => 'Add support for the gametel gem'
       argument :with_mohawk, :type => :string, :desc => 'Add support for the mohawk gem'
       argument :with_appium, :type => :string, :desc => 'Add support for appium gem'
 
@@ -45,7 +43,7 @@ module TestGen
       end
       
       def copy_hooks
-        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" unless no_driver_selected
+        template "hooks.rb.tt", "#{name}/features/support/hooks.rb" if gen_pageobject
       end
       
       def create_lib_directory
@@ -54,18 +52,18 @@ module TestGen
       
       def create_pages_directory
         if gen_lib
-          empty_directory("#{name}/lib/pages") unless no_driver_selected
-          empty_directory("#{name}/lib/screens") if with_gametel == 'true'|| with_mohawk == 'true' || with_appium == 'true'
+          empty_directory("#{name}/lib/pages") if gen_pageobject
+          empty_directory("#{name}/lib/screens") unless gen_pageobject
         else
-          empty_directory("#{name}/features/support/pages") unless no_driver_selected
-          empty_directory("#{name}/features/support/screens") if with_gametel == 'true' || with_mohawk == 'true' || with_appium == 'true'
+          empty_directory("#{name}/features/support/pages") if gen_pageobject
+          empty_directory("#{name}/features/support/screens") unless gen_pageobject
         end
       end
       
       private
-      
-      def no_driver_selected
-        pageobject_driver.downcase == 'none'
+
+      def gen_pageobject
+        with_mohawk == 'false' && with_appium == 'false'
       end
       
       def gen_lib
